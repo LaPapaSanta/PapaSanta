@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./assets/img/logo/logo_pagina.ico"
+            type="image/x-icon">
+        <title>Papa Santa</title>
+        <!-- Enlazar el archivo CSS de Bootstrap -->
+        <link rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+        <link rel="stylesheet" href="./assets/estilos.css">
+        <style>
+        /* Estilos para el cuerpo de la página */
+        body {
+            background-image: url('./assets/img/Fondo.jpg');
+            background-size: auto; /* Ajusta el tamaño de la imagen para que cubra toda la página */
+            background-repeat: repeat;
+            background-attachment: fixed; /* Fija la imagen en su lugar para que no se desplace al desplazarse por la página */
+            background-position: center; /* Centra la imagen de fondo */
+            color: #ffffff; /* Color del texto sobre la imagen de fondo */
+        }
+    </style>
+    </head>
+    <body>
+
+        <div class="card bg-dark">
+            <div class="card-body">
+                <!-- Encabezado (Navbar) -->
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Menú</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Acerca de nosotros</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Sección de Bienvenida (Jumbotron) con imagen de fondo -->
+        <div class="jumbotron text-center" id="jumbotron">
+            <!-- Fondo transparente -->
+            <img src="./assets/img/Fondo_encabezado.png"
+                alt="Imagen de bienvenida" class="img-fluid">
+        </div>
+
+        <!-- Contenedor principal -->
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Sección de Menú 1 -->
+                <div class="col-md-3">
+                    <section class="py-5 bg-white">
+                        <div class="text-center">
+                            <h2 class="display-10 text-dark">Desayunos
+                                deliciosos</h2>
+                            <hr class="my-4">
+                        </div>
+
+                        <!-- Combo box para seleccionar productos -->
+                        <select id="productSelect" class="form-control">
+                            <option value="Selecciona">Selecciona un
+                                producto</option>
+                            <option value="Crepas">Crepa</option>
+                            <option value="Omelette">Omelette</option>
+                            <option value="Tortas">Torta</option>
+                            <option value="Sandwich">Sandwich</option>
+                        </select>
+
+                        <!-- Contenedor para crepas -->
+                        <div id="crepasContainer">
+                            <!-- 1 -->
+                            <div class="card mb-4"
+                                data-product="Crepa salada de jamón y tres quesos">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark">Crepa
+                                        1</h5>
+                                    <img src="./assets/img/Crepa.jpg"
+                                        alt="Imagen del producto"
+                                        class="productImage" width="150"
+                                        height="150">
+                                    <p class="card-text text-dark">Crepa salada
+                                        de jamón y tres quesos</p>
+                                    <p class="card-text text-dark"
+                                        data-precio="$60.00">$60.00</p>
+                                    <button class="btn btn-primary"
+                                        onclick="ordenarPorWhatsApp()">Ordenar
+                                        por WhatsApp</button>
+                                </div>
+                            </div>
+                            <!-- 2 -->
+                            <div class="card mb-4"
+                                data-product="Crepa 2">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark">Crepa
+                                        2</h5>
+                                    <img src="./assets/img/Crepa.jpg"
+                                        alt="Imagen del producto"
+                                        class="productImage" width="150"
+                                        height="150">
+                                    <p class="card-text text-dark">Crepa salada
+                                        de jamón y tres quesos</p>
+                                    <p class="card-text text-dark"
+                                        data-precio="$60.00">$60.00</p>
+                                    <button class="btn btn-primary"
+                                        onclick="ordenarPorWhatsApp()">Ordenar
+                                        por WhatsApp</button>
+                                </div>
+                            </div>
+                            <!-- 3 -->
+                            <div class="card mb-4"
+                                data-product="Crepa 3">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark">Crepa
+                                        3</h5>
+                                    <img src="./assets/img/Crepa.jpg"
+                                        alt="Imagen del producto"
+                                        class="productImage" width="150"
+                                        height="150">
+                                    <p class="card-text text-dark">Crepa salada
+                                        de jamón y tres quesos</p>
+                                    <p class="card-text text-dark"
+                                        data-precio="$60.00">$60.00</p>
+                                    <button class="btn btn-primary"
+                                        onclick="ordenarPorWhatsApp()">Ordenar
+                                        por WhatsApp</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contenedor para Omelettes -->
+                        <div id="omeletteContainer">
+                            <!-- 1 -->
+                            <div class="card mb-4"
+                                data-product="Omelette">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark">Omelette
+                                        1</h5>
+                                    <img src="./assets/img/Crepa.jpg"
+                                        alt="Imagen del producto"
+                                        class="productImage" width="150"
+                                        height="150">
+                                    <p class="card-text text-dark">Descripción
+                                        de Omelette 1</p>
+                                    <p class="card-text text-dark"
+                                        data-precio="$60.00">$60.00</p>
+                                    <button class="btn btn-primary"
+                                        onclick="ordenarPorWhatsApp()">Ordenar
+                                        por WhatsApp</button>
+                                </div>
+                            </div>
+                            <!-- 2 -->
+                            <div class="card mb-4"
+                                data-product="Omelette 2">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark">Omelette
+                                        2</h5>
+                                    <img src="./assets/img/Crepa.jpg"
+                                        alt="Imagen del producto"
+                                        class="productImage" width="150"
+                                        height="150">
+                                    <p class="card-text text-dark">Descripción
+                                        de Omelette 2</p>
+                                    <p class="card-text text-dark"
+                                        data-precio="$60.00">$60.00</p>
+                                    <button class="btn btn-primary"
+                                        onclick="ordenarPorWhatsApp()">Ordenar
+                                        por WhatsApp</button>
+                                </div>
+                            </div>
+                            <!-- 3 -->
+                            <div class="card mb-4"
+                                data-product="Omelette 3">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark">Omelette
+                                        3</h5>
+                                    <img src="./assets/img/Crepa.jpg"
+                                        alt="Imagen del producto"
+                                        class="productImage" width="150"
+                                        height="150">
+                                    <p class="card-text text-dark">Descripción
+                                        de Omelette 3</p>
+                                    <p class="card-text text-dark"
+                                        data-precio="$60.00">$60.00</p>
+                                    <button class="btn btn-primary"
+                                        onclick="ordenarPorWhatsApp()">Ordenar
+                                        por WhatsApp</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contenedor para Tortas -->
+                        <div id="tortasContainer">
+                            <!-- 1 -->
+                            <div class="card mb-4"
+                                data-product="Tortas">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark">Tortas
+                                        1</h5>
+                                    <img src="./assets/img/Crepa.jpg"
+                                        alt="Imagen del producto"
+                                        class="productImage" width="150"
+                                        height="150">
+                                    <p class="card-text text-dark">Descripción
+                                        de Tortas 1</p>
+                                    <p class="card-text text-dark"
+                                        data-precio="$60.00">$60.00</p>
+                                    <button class="btn btn-primary"
+                                        onclick="ordenarPorWhatsApp()">Ordenar
+                                        por WhatsApp</button>
+                                </div>
+                            </div>
+                            <!-- 2 -->
+                            <div class="card mb-4"
+                                data-product="Tortas 2">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark">Tortas
+                                        2</h5>
+                                    <img src="./assets/img/Crepa.jpg"
+                                        alt="Imagen del producto"
+                                        class="productImage" width="150"
+                                        height="150">
+                                    <p class="card-text text-dark">Descripción
+                                        de Tortas 2</p>
+                                    <p class="card-text text-dark"
+                                        data-precio="$60.00">$60.00</p>
+                                    <button class="btn btn-primary"
+                                        onclick="ordenarPorWhatsApp()">Ordenar
+                                        por WhatsApp</button>
+                                </div>
+                            </div>
+                            <!-- 3 -->
+                            <div class="card mb-4"
+                                data-product="Tortas 3">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark">Tortas
+                                        3</h5>
+                                    <img src="./assets/img/Crepa.jpg"
+                                        alt="Imagen del producto"
+                                        class="productImage" width="150"
+                                        height="150">
+                                    <p class="card-text text-dark">Descripción
+                                        de Tortas 3</p>
+                                    <p class="card-text text-dark"
+                                        data-precio="$60.00">$60.00</p>
+                                    <button class="btn btn-primary"
+                                        onclick="ordenarPorWhatsApp()">Ordenar
+                                        por WhatsApp</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contenedor para sandwich -->
+                        <div id="sandwichContainer">
+                            <!-- 1 -->
+                            <div class="card mb-4"
+                                data-product="Sandwich">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark">Sandwich
+                                        1</h5>
+                                    <img src="./assets/img/Crepa.jpg"
+                                        alt="Imagen del producto"
+                                        class="productImage" width="150"
+                                        height="150">
+                                    <p class="card-text text-dark">Descripción de Sandwich 1</p>
+                                    <p class="card-text text-dark"
+                                        data-precio="$60.00">$60.00</p>
+                                    <button class="btn btn-primary"
+                                        onclick="ordenarPorWhatsApp()">Ordenar
+                                        por WhatsApp</button>
+                                </div>
+                            </div>
+                            <!-- 2 -->
+                            <div class="card mb-4"
+                                data-product="Sandwich 2">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark">Sandwich
+                                        2</h5>
+                                    <img src="./assets/img/Crepa.jpg"
+                                        alt="Imagen del producto"
+                                        class="productImage" width="150"
+                                        height="150">
+                                    <p class="card-text text-dark">Descripción de Sandwich 2</p>
+                                    <p class="card-text text-dark"
+                                        data-precio="$60.00">$60.00</p>
+                                    <button class="btn btn-primary"
+                                        onclick="ordenarPorWhatsApp()">Ordenar
+                                        por WhatsApp</button>
+                                </div>
+                            </div>
+                            <!-- 3 -->
+                            <div class="card mb-4"
+                                data-product="Sandwich 3">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark">Sandwich
+                                        3</h5>
+                                    <img src="./assets/img/Crepa.jpg"
+                                        alt="Imagen del producto"
+                                        class="productImage" width="150"
+                                        height="150">
+                                    <p class="card-text text-dark">Descripción de Sandwich 3</p>
+                                    <p class="card-text text-dark"
+                                        data-precio="$60.00">$60.00</p>
+                                    <button class="btn btn-primary"
+                                        onclick="ordenarPorWhatsApp()">Ordenar
+                                        por WhatsApp</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contenedor para todas las tarjetas de productos -->
+                        <div id="productCards">
+                            <!-- Tarjetas de productos (una por cada producto) -->
+                            <div class="card mb-4"
+                                data-product="Crepa salada de jamón y tres quesos">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark">Crepa</h5>
+                                    <img src="./assets/img/Crepa.jpg"
+                                        alt="Imagen del producto"
+                                        class="productImage" width="150"
+                                        height="150">
+                                    <p class="card-text text-dark">Crepa salada
+                                        de jamón y tres quesos</p>
+                                    <p class="card-text text-dark"
+                                        data-precio="$60.00">$60.00</p>
+                                    <button class="btn btn-primary"
+                                        onclick="ordenarPorWhatsApp()">Ordenar
+                                        por WhatsApp</button>
+                                </div>
+                            </div>
+
+                            <!-- Agrega las tarjetas de otros productos aquí de la misma manera -->
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Sección de Menú 2 -->
+                <div class="col-md-3">
+                    <section class="py-5 bg-white">
+                        <div class="text-center">
+                            <h2 class="display-10 text-dark">Comidas
+                                sabrosas</h2>
+                            <hr class="my-4">
+                        </div>
+                        <!-- Repite este bloque para otros platos -->
+                        <div class="card mb-4"
+                            data-product="Crepa salada de jamón y tres quesos">
+                            <div class="card-body">
+                                <h5 class="card-title text-dark">Burrito</h5>
+                                <p class="card-text text-dark">Delicioso Burrito
+                                    (poblano, suadero, campechano)</p>
+                                <p class="card-text text-dark"
+                                    data-precio="$65.00">$65.00</p>
+                                <button class="btn btn-primary"
+                                    onclick="ordenarPorWhatsApp()">Ordenar por
+                                    WhatsApp</button>
+                            </div>
+                        </div>
+                        <!-- Fin del bloque repetido -->
+                    </section>
+                </div>
+
+                <!-- Sección de Menú 3 -->
+                <div class="col-md-3">
+                    <section class="py-5 bg-white">
+                        <div class="text-center">
+                            <h2 class="display-10 text-dark">Beber con
+                                placer</h2>
+                            <hr class="my-4">
+                        </div>
+                        <!-- Repite este bloque para otros platos -->
+                        <div class="card mb-4"
+                            data-product="Crepa salada de jamón y tres quesos">
+                            <div class="card-body">
+                                <h5 class="card-title text-dark">Burrito</h5>
+                                <p class="card-text text-dark">Delicioso Burrito
+                                    (poblano, suadero, campechano)</p>
+                                <p class="card-text text-dark"
+                                    data-precio="$65.00">$65.00</p>
+                                <button class="btn btn-primary"
+                                    onclick="ordenarPorWhatsApp()">Ordenar por
+                                    WhatsApp</button>
+                            </div>
+                        </div>
+                        <!-- Fin del bloque repetido -->
+                    </section>
+                </div>
+
+                <!-- Sección de Menú 4 -->
+                <div class="col-md-3">
+                    <section class="py-5 bg-white">
+                        <div class="text-center">
+                            <h2 class="display-5 text-dark">Postres
+                                tentadores</h2>
+                            <hr class="my-4">
+                        </div>
+                        <!-- Repite este bloque para otros platos -->
+                        <div class="card mb-4"
+                            data-product="Crepa salada de jamón y tres quesos">
+                            <div class="card-body">
+                                <h5 class="card-title text-dark">Burrito</h5>
+                                <p class="card-text text-dark">Delicioso Burrito
+                                    (poblano, suadero, campechano)</p>
+                                <p class="card-text text-dark"
+                                    data-precio="$65.00">$65.00</p>
+                                <button class="btn btn-primary"
+                                    onclick="ordenarPorWhatsApp()">Ordenar por
+                                    WhatsApp</button>
+                            </div>
+                        </div>
+                        <!-- Fin del bloque repetido -->
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <footer class="bg-dark text-white py-5">
+            <div class="container">
+                <h2 class="text-center">Contactanos y visita nuestras redes
+                    sociales</h2>
+                <div class="row">
+                    <div class="col-md-6 mx-auto">
+                        <form>
+                            <!-- Campos de formulario -->
+                        </form>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <!-- Iconos de redes sociales -->
+                    <a
+                        href="https://www.facebook.com/profile.php?id=61552565423583"
+                        class="text-white mx-2 fa-2x"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a
+                        href="https://www.instagram.com/Papa.santa1?fbclid=IwAR3lHoBWRvzKnPOz6zq2mE1RNhGoqnhgrvYQvRW-ErHoIg6OFckhZm99nPU"
+                        class="text-white mx-2"><i
+                            class="fab fa-instagram fa-2x"></i></a>
+                    <a href="#" class="text-white mx-2"><i
+                            class="fab fa-tiktok fa-2x"></i></a>
+                    <a href="https://wa.me/+525560341556"
+                        class="text-white mx-2 fa-2x"><i
+                            class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Enlazar el archivo JavaScript de Bootstrap y jQuery (opcional) -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js"></script>
+        <script src="./assets/funciones.js"></script>
+    </body>
+</html>
