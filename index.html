@@ -28,15 +28,6 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Menú</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Acerca de nosotros</a>
-                    </li>
                 </ul>
             </div>
         </nav>
@@ -44,7 +35,7 @@
 
         <!-- Sección de Bienvenida (Jumbotron) con imagen de fondo -->
         <div class="card bg-dark bg-black"></div>
-            <div class="jumbotron-fluid text-center container" id="jumbotron">
+            <div class="jumbotron-fluid text-center container jumbotron-custom-pri" id="jumbotron">
                 <!-- Fondo transparente -->
                 <img src="./assets/img/Disfuta.png"
                     alt="Imagen de bienvenida" class="img-fluid">
@@ -64,24 +55,28 @@
                                     <button class="btn btn-lg btn-with-border">
                                         <img src="./assets/img/desayuno-ingles.gif" alt="Desayunos" width="150" class="img-fluid">
                                         <h5 class="font-weight-bold text-center d-none d-md-block">Desayunos</h5>
+                                        <h5 class="font-weight-bold text-center d-md-none">Desayunos</h5>
                                     </button>
                                 </div>
                                 <div class="col-6 col-md-3 mb-3">
                                     <button class="btn btn-lg btn-with-border">
                                         <img src="./assets/img/hamburguesa.gif" alt="Comidas" width="150" class="img-fluid">
-                                        <h5 class="font-weight-bold text-center d-none d-md-block">Comida</h5>
+                                        <h5 class="font-weight-bold text-center d-none d-md-block">Comidas</h5>
+                                        <h5 class="font-weight-bold text-center d-md-none">Comidas</h5>
                                     </button>
                                 </div>
                                 <div class="col-6 col-md-3 mb-3">
                                     <button class="btn btn-lg btn-with-border">
                                         <img src="./assets/img/tarta-de-manzana.gif" alt="Postres" width="150" class="img-fluid">
                                         <h5 class="font-weight-bold text-center d-none d-md-block">Postres</h5>
+                                        <h5 class="font-weight-bold text-center d-md-none">Postres</h5>
                                     </button>
                                 </div>
                                 <div class="col-6 col-md-3 mb-3">
                                     <button class="btn btn-lg btn-with-border">
                                         <img src="./assets/img/taza-de-cafe.gif" alt="Bebidas" width="150" class="img-fluid">
                                         <h5 class="font-weight-bold text-center d-none d-md-block">Bebidas</h5>
+                                        <h5 class="font-weight-bold text-center d-md-none">Bebidas</h5>
                                     </button>
                                 </div>
                             </div>
@@ -92,17 +87,21 @@
             </div>
         </div>
         
-
-        <div class="jumbotron">
-            <h1 class="display-4 text-center my-4 text-primary">Los más pedidos</h1>
-            <p class="lead text-center text-muted">¡Descubre nuestros deliciosos platillos!</p>            
+        <div class="jumbotron-fluid text-center container jumbotron-custom" id="jumbotron">
+            <!-- Fondo transparente -->
+            <img src="./assets/img/rico.png" alt="Imagen de bienvenida" class="img-fluid" style="width: 40%;">
+        </div>
+        
+        <div style="margin-bottom: 50px;"></div>
+        
+        <div class="jumbotron-fluid text-center container jumbotron-custom">          
             <div class="row">
                 <!-- Primera fila de 3 imágenes -->
                 <div class="col-md-4 col-sm-6 col-xs-12 mb-3">
                     <div class="card custom-card">
                         <img src="./assets/img/HamburguesaPechuga.png" alt="Imagen 1" class="card-img-top" style="width: 100%; height: 100%;">
                         <div class="overlay">
-                            <button class="btn btn-primary"
+                            <button class="btn btn-primary btn-with-border btn-ordenar"
                             onclick="ordenarPorWhatsApp()">Ordenar
                             por WhatsApp</button>
                         </div>
@@ -112,7 +111,7 @@
                     <div class="card custom-card">
                         <img src="./assets/img/Costras.png" alt="Imagen 2" class="card-img-top" style="width: 100%; height: 100%;">
                         <div class="overlay">
-                            <button class="btn btn-primary"
+                            <button class="btn btn-primary btn-with-border btn-ordenar"
                             onclick="ordenarPorWhatsApp()">Ordenar
                             por WhatsApp</button>
                         </div>
@@ -122,7 +121,7 @@
                     <div class="card custom-card">
                         <img src="./assets/img/LasagnaPastor.png" alt="Imagen 3" class="card-img-top" style="width: 100%; height: 100%;">
                         <div class="overlay">
-                            <button class="btn btn-primary"
+                            <button class="btn btn-primary btn-with-border btn-ordenar"
                             onclick="ordenarPorWhatsApp()">Ordenar
                             por WhatsApp</button>
                         </div>
@@ -135,7 +134,7 @@
                     <div class="card custom-card">
                         <img src="./assets/img/Sanswich4Quesos.png" alt="Imagen 4" class="card-img-top" style="width: 100%; height: 100%;">
                         <div class="overlay">
-                            <button class="btn btn-primary"
+                            <button class="btn btn-primary btn-with-border btn-ordenar"
                             onclick="ordenarPorWhatsApp()">Ordenar
                             por WhatsApp</button>
                         </div>
@@ -145,18 +144,15 @@
                     <div class="card custom-card">
                         <img src="./assets/img/SantoAlambre.png" alt="Imagen 5" class="card-img-top" style="width: 100%; height: 100%;">
                         <div class="overlay">
-                            <button class="btn btn-primary"
+                            <button class="btn btn-primary btn-with-border btn-ordenar"
                             onclick="ordenarPorWhatsApp()">Ordenar
                             por WhatsApp</button>
                         </div>
                     </div>
                 </div>
             </div>            
-        </div>
+        </div>    
         
-        
-        
-
     
 
         <footer class="bg-dark text-white py-2">
