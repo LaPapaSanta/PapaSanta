@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./assets/img/logo/logo_pagina.ico"
+            type="image/x-icon">
+        <title>Papa Santa</title>
+        <!-- Enlazar el archivo CSS de Bootstrap -->
+        <link rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+        <link rel="stylesheet" href="./assets/estilos.css">
+        <style>
+        /* Estilos para el cuerpo de la página */
+        body {
+            background-color: rgb(255, 255, 255);
+        }
+    </style>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Papa Santa</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                </ul>
+            </div>
+        </nav>
+        
+
+        <!-- Sección de Bienvenida (Jumbotron) con imagen de fondo -->
+        <div class="card bg-dark bg-black"></div>
+            <div class="jumbotron-fluid text-center container jumbotron-custom-pri" id="jumbotron">
+                <!-- Fondo transparente -->
+                <img src="./assets/img/Disfuta.png"
+                    alt="Imagen de bienvenida" class="img-fluid">
+            </div>
+        </div>
+
+
+
+        <div class="container-fluid contenedor_botones mt-3">
+            <div class="row justify-content-center">
+                <div class="col-md">
+                    <section class="py-5">
+                        <div class="text-center">
+                            <!-- Botones en forma de imagen -->
+                            <div class="row">
+                                <div class="col-6 col-md-3 mb-3">
+                                    <button class="btn btn-lg btn-with-border">
+                                        <img src="./assets/img/desayuno-ingles.gif" alt="Desayunos" width="150" class="img-fluid">
+                                        <h5 class="font-weight-bold text-center d-none d-md-block">Desayunos</h5>
+                                        <h5 class="font-weight-bold text-center d-md-none">Desayunos</h5>
+                                    </button>
+                                </div>
+                                <div class="col-6 col-md-3 mb-3">
+                                    <button class="btn btn-lg btn-with-border">
+                                        <img src="./assets/img/hamburguesa.gif" alt="Comidas" width="150" class="img-fluid">
+                                        <h5 class="font-weight-bold text-center d-none d-md-block">Comidas</h5>
+                                        <h5 class="font-weight-bold text-center d-md-none">Comidas</h5>
+                                    </button>
+                                </div>
+                                <div class="col-6 col-md-3 mb-3">
+                                    <button class="btn btn-lg btn-with-border">
+                                        <img src="./assets/img/tarta-de-manzana.gif" alt="Postres" width="150" class="img-fluid">
+                                        <h5 class="font-weight-bold text-center d-none d-md-block">Postres</h5>
+                                        <h5 class="font-weight-bold text-center d-md-none">Postres</h5>
+                                    </button>
+                                </div>
+                                <div class="col-6 col-md-3 mb-3">
+                                    <button class="btn btn-lg btn-with-border">
+                                        <img src="./assets/img/taza-de-cafe.gif" alt="Bebidas" width="150" class="img-fluid">
+                                        <h5 class="font-weight-bold text-center d-none d-md-block">Bebidas</h5>
+                                        <h5 class="font-weight-bold text-center d-md-none">Bebidas</h5>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!-- Resto de tu contenido -->
+            </div>
+        </div>
+        
+        <div class="jumbotron-fluid text-center container jumbotron-custom" id="jumbotron">
+            <!-- Fondo transparente -->
+            <img src="./assets/img/rico.png" alt="Imagen de bienvenida" class="img-fluid" style="width: 100%;">
+        </div>
+        
+        <div style="margin-bottom: 50px;"></div>
+        
+        <div class="jumbotron-fluid text-center container jumbotron-custom">          
+            <div class="row">
+                <!-- Primera fila de 3 imágenes -->
+                <div class="col-md-4 col-sm-6 col-xs-12 mb-3">
+                    <div class="card custom-card">
+                        <h3 class="text-bg-primary" hidden>Hamburguesa de pechuga</h4>
+                        <img src="./assets/img/HamburguesaPechuga.png" alt="Imagen 1" class="card-img-top" style="width: 100%; height: 100%;">
+                        <div class="overlay">
+                            <button class="btn btn-primary btn-with-border btn-ordenar"
+                            onclick="ordenarPorWhatsApp()">Ordenar
+                            por WhatsApp</button>
+                        </div>
+                        <h4 class="animated-text">$80</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12 mb-3">
+                    <div class="card custom-card">
+                        <h3 class="text-bg-primary" hidden>Costras</h4>
+                        <img src="./assets/img/Costras.png" alt="Imagen 2" class="card-img-top" style="width: 100%; height: 100%;">
+                        <div class="overlay">
+                            <button class="btn btn-primary btn-with-border btn-ordenar"
+                            onclick="ordenarPorWhatsApp()">Ordenar
+                            por WhatsApp</button>
+                        </div>
+                        <h4 class="animated-text">$45</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12 mb-3">
+                    <div class="card custom-card">
+                        <h3 class="text-bg-primary" hidden>Lasagna al pastor</h4>
+                        <img src="./assets/img/LasagnaPastor.png" alt="Imagen 3" class="card-img-top" style="width: 100%; height: 100%;">
+                        <div class="overlay">
+                            <button class="btn btn-primary btn-with-border btn-ordenar"
+                            onclick="ordenarPorWhatsApp()">Ordenar
+                            por WhatsApp</button>
+                        </div>
+                        <h4 class="animated-text">$100</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Segunda fila de 2 imágenes -->
+                <div class="col-md-6 col-sm-6 col-xs-12 mb-3">
+                    <div class="card custom-card">
+                        <h3 class="text-bg-primary" hidden>Sandwich 4 quesos</h4>
+                        <img src="./assets/img/Sanswich4Quesos.png" alt="Imagen 4" class="card-img-top" style="width: 100%; height: 100%;">
+                        <div class="overlay">
+                            <button class="btn btn-primary btn-with-border btn-ordenar"
+                            onclick="ordenarPorWhatsApp()">Ordenar
+                            por WhatsApp</button>
+                        </div>
+                        <h4 class="animated-text">$60</h4>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12 mb-3">
+                    <div class="card custom-card">
+                        <h3 class="text-bg-primary" hidden>Santo Alambre</h4>
+                        <img src="./assets/img/SantoAlambre.png" alt="Imagen 5" class="card-img-top" style="width: 100%; height: 100%;">
+                        <div class="overlay">
+                            <button class="btn btn-primary btn-with-border btn-ordenar"
+                            onclick="ordenarPorWhatsApp()">Ordenar
+                            por WhatsApp</button>
+                        </div>
+                        <h4 class="animated-text">$85</h4>
+                    </div>
+                </div>
+            </div>            
+        </div>    
+        
+    
+
+        <footer class="bg-dark text-white py-2">
+            <div class="container">
+                <h4 class="text-center">Contactanos y visita nuestras redes
+                    sociales</h4>
+                <div class="row">
+                    <div class="col-md-3 mx-auto">
+                        <form>
+                            <!-- Campos de formulario -->
+                        </form>
+                    </div>
+                </div>
+                <div class="text-center mt-2">
+                    <!-- Iconos de redes sociales -->
+                    <a
+                        href="https://www.facebook.com/profile.php?id=61552565423583"
+                        class="text-white mx-2 fa-2x"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a
+                        href="https://www.instagram.com/Papa.santa1?fbclid=IwAR3lHoBWRvzKnPOz6zq2mE1RNhGoqnhgrvYQvRW-ErHoIg6OFckhZm99nPU"
+                        class="text-white mx-2"><i
+                            class="fab fa-instagram fa-2x"></i></a>
+                    <a href="#" class="text-white mx-2"><i
+                            class="fab fa-tiktok fa-2x"></i></a>
+                    <a href="https://wa.me/+525560341556"
+                        class="text-white mx-2 fa-2x"><i
+                            class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Enlazar el archivo JavaScript de Bootstrap y jQuery (opcional) -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js"></script>
+        <script src="./assets/funciones.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.0/dist/umd/popper.min.js"></script>
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>
